@@ -1461,19 +1461,149 @@ body {
         font-size: 0.88rem;
     }
 
-    .phase-title {
-        font-size: 1.4rem;
-        margin-top: 30px;
-        border-bottom: 2px solid #eee;
-        padding-bottom: 10px;
-    }
-}
+/* --- Professional Media Query: Computer Science Roadmap --- */
 
-/* تحسين السحب على الجوال */
-.awl8sm::-webkit-scrollbar {
-    height: 5px;
-}
-.awl8sm::-webkit-scrollbar-thumb {
-    background: #7a00ff;
-    border-radius: 10px;
+@media (max-width: 850px) {
+    /* 1. تحويل الـ Diagram من شكل مبعثر إلى مسار تدفقي (Flow Path) */
+    .awl8sm {
+        padding: 60px 20px;
+        background: radial-gradient(circle at top, #fdfbff 0%, #ffffff 100%);
+    }
+
+    .diagram {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100% !important;
+        height: auto !important;
+        transform: none !important; /* إلغاء أي تصغير قديم */
+        gap: 0; /* سنتحكم في المسافات يدوياً */
+    }
+
+    /* طالب العلم في البداية كأنه هو من يقود المسار */
+    .center {
+        position: relative !important;
+        margin-bottom: 50px;
+        z-index: 2;
+    }
+    .student { width: 140px; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1)); }
+
+    /* تحويل كل الصناديق لتصطف كخطوات متتالية */
+    .pos {
+        position: relative !important;
+        inset: auto !important; /* إلغاء top, left, right, bottom */
+        margin: -10px 0; /* تداخل بسيط ليعطي شكل السلسلة */
+        width: 100% !important;
+        display: flex;
+        justify-content: center;
+        transition: transform 0.3s ease;
+    }
+
+    .box {
+        max-width: 90% !important;
+        height: auto;
+        filter: drop-shadow(0 5px 10px rgba(0,0,0,0.08));
+    }
+
+    /* إضافة تأثير "خيط" أو مسار يربط بين الصناديق (بواسطة CSS) */
+    .pos::after {
+        content: '';
+        position: absolute;
+        top: 80%;
+        width: 2px;
+        height: 40px;
+        background: linear-gradient(to bottom, #7a00ff, transparent);
+        z-index: -1;
+    }
+    .pos:last-child::after { display: none; }
+
+    /* 2. تحسين قسم العناوين (Dark Section) */
+    .dark-sec {
+        margin: 40px 15px;
+        padding: 30px 20px;
+        border-radius: 24px;
+        background: #1a1a1a; /* لون داكن فخم */
+        box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    }
+
+    .dark-sec .title {
+        font-size: 1.25rem;
+        line-height: 1.5;
+        margin-bottom: 25px;
+        color: #fff;
+    }
+
+    .boxes {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .boxxx, .boxx {
+        padding: 18px;
+        border-radius: 12px;
+        font-size: 0.9rem;
+        border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* 3. إعادة ابتكار كروت المواد (The Subject Cards) */
+    .subjects-section { padding: 40px 15px; }
+
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .subject-card {
+        background: #fff;
+        border: none;
+        border-radius: 20px;
+        padding: 25px;
+        /* تصميم الـ Neumorphism الناعم */
+        box-shadow: 12px 12px 25px #e6e6e6, -12px -12px 25px #ffffff;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* لمسة جمالية: شريط ملون علوي لكل كرت */
+    .subject-card::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 5px;
+        background: linear-gradient(90deg, #7a00ff, #00d4ff);
+    }
+
+    .card-header h3 {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #2d2d2d;
+    }
+
+    .subject-card p {
+        font-size: 1rem;
+        line-height: 1.8;
+        color: #555;
+        margin: 15px 0;
+    }
+
+    .importance-box {
+        background: #fdfaff;
+        border-radius: 12px;
+        border-left: none;
+        border-right: 4px solid #7a00ff;
+        padding: 15px;
+        font-size: 0.9rem;
+        color: #444;
+    }
+
+    .phase-title {
+        font-size: 1.6rem;
+        margin: 50px 0 20px;
+        color: #7a00ff;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
 }
