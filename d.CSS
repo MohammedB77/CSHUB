@@ -1010,7 +1010,9 @@ a {
         justify-content: space-around; 
         height: 70px;
         padding: 0 20px;
-        overflow: hidden; 
+      overflow-x: auto;
+overflow-y: hidden;
+  
         white-space: nowrap;
     }
     .top-bar nav {
@@ -1020,7 +1022,17 @@ a {
         transform: none;
         height: auto;
     }
+.top-bar nav ul {
+    overflow-x: auto;
+    scrollbar-width: none; /* فايرفوكس */
+}
+
+.top-bar nav ul::-webkit-scrollbar {
+    display: none; /* كروم */
+}
+
     .top-bar nav ul {
+
         display: flex; 
         flex-direction: row; 
         gap: 20px;
@@ -1419,4 +1431,5 @@ body {
         padding: 14px;
     }
 }
+
 
