@@ -1441,3 +1441,107 @@ body {
         padding: 14px;
     }
 }
+
+
+/* --- Media Queries لصفحة دليل علوم الحاسب --- */
+
+@media (max-width: 1024px) {
+    /* تحويل شبكة المواد لتناسب الشاشات المتوسطة (تابلت) */
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* 1. التعامل مع الرسم التوضيحي (الخريطة الذهنية) */
+    .awl8sm {
+        overflow-x: hidden;
+        padding: 50px 0;
+    }
+
+    .diagram {
+        display: flex;
+        flex-direction: column; /* تحويل العناصر لتكون تحت بعض بدلاً من التوزيع الدائري */
+        align-items: center;
+        gap: 20px;
+        transform: scale(0.9); /* تصغير بسيط لتناسب العرض */
+    }
+
+    /* إلغاء التموضع المطلق (Position Absolute) في الجوال ليصبح التصميم انسيابياً */
+    .pos {
+        position: static !important;
+        margin: 10px 0;
+        width: 100% !important;
+        display: flex;
+        justify-content: center;
+    }
+
+    .box {
+        max-width: 280px; /* تحديد عرض الصور لكي لا تخرج عن الشاشة */
+        height: auto;
+    }
+
+    .center {
+        position: static !important;
+        order: -1; /* وضع صورة الطالب في البداية */
+        margin-bottom: 30px;
+    }
+
+    .student {
+        width: 150px;
+    }
+
+    /* 2. قسم العناوين والتحذيرات */
+    .dark-sec .title {
+        font-size: 1.4rem;
+        padding: 0 15px;
+    }
+
+    .boxes {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    /* 3. شبكة المواد الدراسية */
+    .subjects-section {
+        padding: 20px 10px;
+    }
+
+    .phase-title {
+        font-size: 1.5rem;
+        text-align: center;
+        grid-column: 1 / -1; /* تأكيد أخذ العرض كامل */
+    }
+
+    .subject-card {
+        margin-bottom: 15px;
+    }
+
+    .card-header h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* تحسينات إضافية للشاشات الصغيرة جداً */
+    .header-title {
+        font-size: 1.2rem;
+    }
+
+    .subject-card p {
+        font-size: 0.9rem;
+    }
+
+    .importance-box {
+        font-size: 0.85rem;
+        padding: 10px;
+    }
+    
+    /* جعل صور المربعات في الخريطة أصغر */
+    .box {
+        max-width: 90%;
+    }
+}
