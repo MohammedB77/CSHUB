@@ -996,7 +996,7 @@ a {
 
 @media (max-width: 1000px) {
 .top-bar {
-        position: relative;
+        position: fixed;
         top: 0;
         left: 0;
         right: 0;
@@ -1010,45 +1010,55 @@ a {
         justify-content: space-around; 
         height: 70px;
         padding: 0 20px;
-      overflow-x: auto;
-overflow-y: hidden;
-  
+        overflow: hidden; 
         white-space: nowrap;
     }
-    .top-bar nav {
-        display: inline-block; 
-        margin-right: 20px;
-        position: static; 
-        transform: none;
-        height: auto;
+    .top-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        z-index: 9999;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        /* إزالة justify-content: space-around */
+        padding: 0 15px;
+        overflow-x: auto; 
+        -webkit-overflow-scrolling: touch; 
     }
-.top-bar nav ul {
-    overflow-x: auto;
-    scrollbar-width: none; /* فايرفوكس */
-}
 
-.top-bar nav ul::-webkit-scrollbar {
-    display: none; /* كروم */
-}
+    .top-bar nav {
+        width: 100%; 
+    }
 
     .top-bar nav ul {
-
-        display: flex; 
-        flex-direction: row; 
+        display: flex;
+        flex-direction: row;
         gap: 20px;
-        padding: 0;
-    }
-    .top-bar nav ul li a {
-        font-size: 16px; 
-    }
-    .top-bar .logo-text {
-        flex-shrink: 0; 
-        margin-left: 20px;
-    }
-    .menu-toggle {
-        display: none; 
+        padding: 0 10px;
+        overflow-x: auto;
+        white-space: nowrap;
+        scrollbar-width: none; 
     }
 
+    .top-bar nav ul::-webkit-scrollbar {
+        display: none;
+    }
+
+    .top-bar nav ul li {
+        flex: 0 0 auto; /* يمنع الروابط من الانضغاط ويحافظ على حجمها */
+    }
+
+    .top-bar nav ul li a {
+        font-size: 15px;
+        display: block;
+        padding: 10px 5px;
+    }
     .main-content {
         flex-direction: column;
         height: auto;
@@ -1431,5 +1441,3 @@ body {
         padding: 14px;
     }
 }
-
-
