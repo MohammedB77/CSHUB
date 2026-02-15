@@ -1460,183 +1460,97 @@ body {
         margin-top: 15px;
         font-size: 0.88rem;
     }
-أبشر، إليك الكود الكامل والمعدل لصفحة "دليل علوم الحاسب" (Media Queries) بلمسة مهندس محترف. هذا الكود يدمج إصلاح "الخريطة العلوية" مع "كروت المواد" في ملف واحد متناسق.
-
-انسخ هذا الكود وضعه في نهاية ملف d.CSS:
-
-CSS
-/* ============================================================
-   Media Queries: CS Roadmap Page (Professional Architecture)
-   ============================================================ */
-
-@media (max-width: 992px) {
-    
-    /* 1. إصلاح الهيدر العلوي (الخريطة الذهنية - Diagram) */
+@media (max-width: 850px) {
+    /* 1. تصفير الحاوية العلوية وجعلها مرنة */
     .awl8sm {
-        padding: 60px 15px;
-        min-height: auto;
-        background: radial-gradient(circle at top, #fdfbff 0%, #ffffff 100%);
-        overflow: hidden;
-    }
-
-    .diagram {
-        display: flex;
-        flex-direction: column; /* تحويل التوزيع الدائري إلى مسار عمودي */
-        align-items: center;
-        justify-content: center;
-        width: 100% !important;
+        padding: 40px 0 !important;
         height: auto !important;
-        position: relative !important;
-        transform: none !important;
-        gap: 20px; /* مسافة متناسقة بين الصور */
     }
 
-    /* ضبط وضعية الطالب ليكون القائد في الأعلى */
+    /* 2. ترتيب الصور تحت بعض (الطالب أولاً) */
+    .diagram {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 25px !important; /* يمنع التداخل نهائياً */
+        height: auto !important;
+        transform: none !important;
+    }
+
     .center {
         position: relative !important;
         inset: auto !important;
-        order: -1; /* يضمن ظهوره أولاً */
-        margin-bottom: 30px;
-        transform: none !important;
+        order: -1; 
     }
 
-    .student {
-        width: 150px;
-        height: auto;
-        filter: drop-shadow(0 10px 20px rgba(122, 0, 255, 0.2));
-    }
+    .student { width: 140px !important; }
 
-    /* تصفير إحداثيات كل الصناديق (Ideas) وجعلها تصطف عمودياً */
+    /* 3. إلغاء التوزيع العشوائي للصناديق العلوية */
     .pos {
         position: relative !important;
         inset: auto !important;
-        width: 100% !important;
-        height: auto !important;
-        display: flex;
-        justify-content: center;
         transform: none !important;
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
     }
 
     .box {
-        max-width: 280px !important; /* حجم مثالي لعرض الجوال */
+        max-width: 85% !important;
         height: auto !important;
-        filter: drop-shadow(0 5px 15px rgba(0,0,0,0.08));
-        transition: all 0.3s ease;
     }
 
-    /* ربط الصناديق بخط بصري وهمي (اختياري لجمالية المسار) */
-    .pos:not(:last-child)::after {
-        content: '';
-        position: absolute;
-        bottom: -20px;
-        width: 2px;
-        height: 20px;
-        background: rgba(122, 0, 255, 0.1);
-    }
-
-    /* 2. قسم التنبيهات (Dark Section) */
+    /* 4. إصلاح القسم الداكن (العناوين المكبوسة) */
     .dark-sec {
-        margin: 40px 15px;
-        padding: 30px 20px;
-        border-radius: 20px;
-        background: #121212;
-        box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-    }
-
-    .dark-sec .title {
-        font-size: 1.2rem;
-        line-height: 1.6;
-        margin-bottom: 25px;
-        color: #fff;
+        padding: 40px 20px !important;
+        text-align: center !important;
     }
 
     .boxes {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
+        flex-direction: column !important;
+        gap: 15px !important;
     }
 
-    .boxxx, .boxx {
-        width: 100%;
-        padding: 15px;
-        font-size: 0.85rem;
-        background: rgba(255,255,255,0.05);
-        border: 1px solid rgba(255,255,255,0.1);
-        border-radius: 12px;
-    }
-
-    /* 3. شبكة المواد الدراسية (Subject Cards) */
-    .subjects-section {
-        padding: 40px 15px;
-    }
+    /* 5. هندسة كروت المواد (التعديل الذي طلبته) */
+    .subjects-section { padding: 20px 15px !important; }
 
     .grid-container {
-        display: flex;
-        flex-direction: column; /* الكروت تحت بعض لراحة العين */
-        gap: 25px;
-    }
-
-    .phase-title {
-        font-size: 1.5rem;
-        margin: 40px 0 15px;
-        padding-right: 10px;
-        border-right: 4px solid #7a00ff;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 25px !important;
     }
 
     .subject-card {
-        background: #ffffff;
-        border: none;
-        border-radius: 18px;
-        padding: 25px;
-        /* ظل ناعم جداً يعطي فخامة (Neumorphism touch) */
-        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        position: relative;
-        overflow: hidden;
-    }
-
-    /* الخط الملون العلوي للتميز */
-    .subject-card::before {
-        content: '';
-        position: absolute;
-        top: 0; right: 0;
-        width: 100%;
-        height: 4px;
-        background: linear-gradient(to left, #7a00ff, #00d4ff);
-    }
-
-    .card-header {
-        margin-bottom: 15px;
+        width: 100% !important;
+        padding: 20px !important;
+        border-radius: 15px !important;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+        border-right: 5px solid #7a00ff !important; /* لمسة جمالية */
+        background: #fff !important;
     }
 
     .card-header h3 {
-        font-size: 1.25rem;
-        font-weight: 700;
-        color: #333;
+        font-size: 1.2rem !important;
+        margin-bottom: 10px !important;
     }
 
     .subject-card p {
-        font-size: 0.95rem;
-        line-height: 1.8; /* مساحة مريحة للقراءة */
-        color: #555;
-        text-align: justify;
+        font-size: 0.95rem !important;
+        line-height: 1.7 !important; /* مساحة مريحة للقراءة */
+        text-align: right !important;
     }
 
     .importance-box {
-        background: #fcfaff;
-        border-radius: 10px;
-        border-right: 3px solid #7a00ff;
-        padding: 15px;
-        font-size: 0.88rem;
-        line-height: 1.5;
-        color: #444;
+        margin-top: 15px !important;
+        padding: 12px !important;
+        font-size: 0.85rem !important;
+        background: #f8f4ff !important;
+        border-radius: 8px !important;
+    }
+
+    .phase-title {
+        font-size: 1.4rem !important;
+        text-align: center !important;
+        margin: 30px 0 10px !important;
     }
 }
-
-/* تحسينات للشاشات الصغيرة جداً (أقل من 480px) */
-@media (max-width: 480px) {
-    .student { width: 120px; }
-    .box { max-width: 95% !important; }
-    .phase-title { font-size: 1.3rem; }
-    .card-header h3 { font-size: 1.15rem; }
-}
-ما الذي ستحصل عليه بهذا الكود؟
