@@ -1460,150 +1460,183 @@ body {
         margin-top: 15px;
         font-size: 0.88rem;
     }
+أبشر، إليك الكود الكامل والمعدل لصفحة "دليل علوم الحاسب" (Media Queries) بلمسة مهندس محترف. هذا الكود يدمج إصلاح "الخريطة العلوية" مع "كروت المواد" في ملف واحد متناسق.
 
-/* --- Professional Media Query: Computer Science Roadmap --- */
+انسخ هذا الكود وضعه في نهاية ملف d.CSS:
 
-@media (max-width: 850px) {
-    /* 1. تحويل الـ Diagram من شكل مبعثر إلى مسار تدفقي (Flow Path) */
+CSS
+/* ============================================================
+   Media Queries: CS Roadmap Page (Professional Architecture)
+   ============================================================ */
+
+@media (max-width: 992px) {
+    
+    /* 1. إصلاح الهيدر العلوي (الخريطة الذهنية - Diagram) */
     .awl8sm {
-        padding: 60px 20px;
+        padding: 60px 15px;
+        min-height: auto;
         background: radial-gradient(circle at top, #fdfbff 0%, #ffffff 100%);
+        overflow: hidden;
     }
 
     .diagram {
         display: flex;
-        flex-direction: column;
+        flex-direction: column; /* تحويل التوزيع الدائري إلى مسار عمودي */
         align-items: center;
+        justify-content: center;
         width: 100% !important;
         height: auto !important;
-        transform: none !important; /* إلغاء أي تصغير قديم */
-        gap: 0; /* سنتحكم في المسافات يدوياً */
+        position: relative !important;
+        transform: none !important;
+        gap: 20px; /* مسافة متناسقة بين الصور */
     }
 
-    /* طالب العلم في البداية كأنه هو من يقود المسار */
+    /* ضبط وضعية الطالب ليكون القائد في الأعلى */
     .center {
         position: relative !important;
-        margin-bottom: 50px;
-        z-index: 2;
+        inset: auto !important;
+        order: -1; /* يضمن ظهوره أولاً */
+        margin-bottom: 30px;
+        transform: none !important;
     }
-    .student { width: 140px; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1)); }
 
-    /* تحويل كل الصناديق لتصطف كخطوات متتالية */
+    .student {
+        width: 150px;
+        height: auto;
+        filter: drop-shadow(0 10px 20px rgba(122, 0, 255, 0.2));
+    }
+
+    /* تصفير إحداثيات كل الصناديق (Ideas) وجعلها تصطف عمودياً */
     .pos {
         position: relative !important;
-        inset: auto !important; /* إلغاء top, left, right, bottom */
-        margin: -10px 0; /* تداخل بسيط ليعطي شكل السلسلة */
+        inset: auto !important;
         width: 100% !important;
+        height: auto !important;
         display: flex;
         justify-content: center;
-        transition: transform 0.3s ease;
+        transform: none !important;
     }
 
     .box {
-        max-width: 90% !important;
-        height: auto;
-        filter: drop-shadow(0 5px 10px rgba(0,0,0,0.08));
+        max-width: 280px !important; /* حجم مثالي لعرض الجوال */
+        height: auto !important;
+        filter: drop-shadow(0 5px 15px rgba(0,0,0,0.08));
+        transition: all 0.3s ease;
     }
 
-    /* إضافة تأثير "خيط" أو مسار يربط بين الصناديق (بواسطة CSS) */
-    .pos::after {
+    /* ربط الصناديق بخط بصري وهمي (اختياري لجمالية المسار) */
+    .pos:not(:last-child)::after {
         content: '';
         position: absolute;
-        top: 80%;
+        bottom: -20px;
         width: 2px;
-        height: 40px;
-        background: linear-gradient(to bottom, #7a00ff, transparent);
-        z-index: -1;
+        height: 20px;
+        background: rgba(122, 0, 255, 0.1);
     }
-    .pos:last-child::after { display: none; }
 
-    /* 2. تحسين قسم العناوين (Dark Section) */
+    /* 2. قسم التنبيهات (Dark Section) */
     .dark-sec {
         margin: 40px 15px;
         padding: 30px 20px;
-        border-radius: 24px;
-        background: #1a1a1a; /* لون داكن فخم */
-        box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        border-radius: 20px;
+        background: #121212;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.2);
     }
 
     .dark-sec .title {
-        font-size: 1.25rem;
-        line-height: 1.5;
+        font-size: 1.2rem;
+        line-height: 1.6;
         margin-bottom: 25px;
         color: #fff;
     }
 
     .boxes {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
     }
 
     .boxxx, .boxx {
-        padding: 18px;
-        border-radius: 12px;
-        font-size: 0.9rem;
+        width: 100%;
+        padding: 15px;
+        font-size: 0.85rem;
+        background: rgba(255,255,255,0.05);
         border: 1px solid rgba(255,255,255,0.1);
+        border-radius: 12px;
     }
 
-    /* 3. إعادة ابتكار كروت المواد (The Subject Cards) */
-    .subjects-section { padding: 40px 15px; }
+    /* 3. شبكة المواد الدراسية (Subject Cards) */
+    .subjects-section {
+        padding: 40px 15px;
+    }
 
     .grid-container {
         display: flex;
-        flex-direction: column;
-        gap: 30px;
+        flex-direction: column; /* الكروت تحت بعض لراحة العين */
+        gap: 25px;
+    }
+
+    .phase-title {
+        font-size: 1.5rem;
+        margin: 40px 0 15px;
+        padding-right: 10px;
+        border-right: 4px solid #7a00ff;
     }
 
     .subject-card {
-        background: #fff;
+        background: #ffffff;
         border: none;
-        border-radius: 20px;
+        border-radius: 18px;
         padding: 25px;
-        /* تصميم الـ Neumorphism الناعم */
-        box-shadow: 12px 12px 25px #e6e6e6, -12px -12px 25px #ffffff;
+        /* ظل ناعم جداً يعطي فخامة (Neumorphism touch) */
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         position: relative;
         overflow: hidden;
     }
 
-    /* لمسة جمالية: شريط ملون علوي لكل كرت */
+    /* الخط الملون العلوي للتميز */
     .subject-card::before {
         content: '';
         position: absolute;
-        top: 0; left: 0; right: 0;
-        height: 5px;
-        background: linear-gradient(90deg, #7a00ff, #00d4ff);
+        top: 0; right: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(to left, #7a00ff, #00d4ff);
+    }
+
+    .card-header {
+        margin-bottom: 15px;
     }
 
     .card-header h3 {
-        font-size: 1.3rem;
+        font-size: 1.25rem;
         font-weight: 700;
-        color: #2d2d2d;
+        color: #333;
     }
 
     .subject-card p {
-        font-size: 1rem;
-        line-height: 1.8;
+        font-size: 0.95rem;
+        line-height: 1.8; /* مساحة مريحة للقراءة */
         color: #555;
-        margin: 15px 0;
+        text-align: justify;
     }
 
     .importance-box {
-        background: #fdfaff;
-        border-radius: 12px;
-        border-left: none;
-        border-right: 4px solid #7a00ff;
+        background: #fcfaff;
+        border-radius: 10px;
+        border-right: 3px solid #7a00ff;
         padding: 15px;
-        font-size: 0.9rem;
+        font-size: 0.88rem;
+        line-height: 1.5;
         color: #444;
     }
-
-    .phase-title {
-        font-size: 1.6rem;
-        margin: 50px 0 20px;
-        color: #7a00ff;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
 }
+
+/* تحسينات للشاشات الصغيرة جداً (أقل من 480px) */
+@media (max-width: 480px) {
+    .student { width: 120px; }
+    .box { max-width: 95% !important; }
+    .phase-title { font-size: 1.3rem; }
+    .card-header h3 { font-size: 1.15rem; }
+}
+ما الذي ستحصل عليه بهذا الكود؟
