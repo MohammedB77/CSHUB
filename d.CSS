@@ -1382,166 +1382,98 @@ body {
     margin-top: 20px;
     font-size: 0.9rem;
 }
-/* Responsive Logic */
-@media (max-width: 1024px) {
-    .diagram { height: auto; flex-direction: column; gap: 40px; }
-    .pos { position: relative !important; left: auto !important; right: auto !important; top: auto !important; transform: none !important; }
-    .center { order: -1; width: 220px; height: 220px; }
-    .pos .box { width: 280px; }
-    .dark-sec { flex-direction: column; text-align: center; }
-}
-
-/* Tablet */
-@media (max-width: 768px) {
-
-    .subjects-section {
-        padding: 70px 5%;
-    }
-
-    .phase-title {
-        font-size: 1.6rem;
-    }
-
-    .grid-container {
-        grid-template-columns: 1fr;
-    }
-
-    .subject-card {
-        padding: 25px;
-    }
-}
-
-/* Mobile */
-@media (max-width: 480px) {
-
-    body {
-        font-size: 14px;
-    }
-
-    .subjects-section {
-        padding: 50px 20px;
-    }
-
-    .phase-title {
-        font-size: 1.3rem;
-        margin: 40px auto 25px;
-    }
-
-    .subject-card {
-        padding: 20px;
-        border-radius: 20px;
-    }
-
-    .card-header h3 {
-        font-size: 1.1rem;
-    }
-
-    .importance-box {
-        font-size: 0.8rem;
-        padding: 14px;
-    }
-}
-
-
 /* --- Media Queries لصفحة دليل علوم الحاسب --- */
 
-@media (max-width: 1024px) {
-    /* تحويل شبكة المواد لتناسب الشاشات المتوسطة (تابلت) */
-    .grid-container {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 20px;
-        padding: 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    /* 1. التعامل مع الرسم التوضيحي (الخريطة الذهنية) */
+@media (max-width: 992px) {
+    /* 1. ضبط الخريطة الذهنية لتكون منطقة قابلة للسحب */
     .awl8sm {
-        overflow-x: hidden;
-        padding: 50px 0;
+        overflow-x: auto; /* تفعيل السحب الأفقي */
+        padding: 40px 0;
+        background: rgba(255, 255, 255, 0.02);
+        cursor: grab;
     }
 
     .diagram {
-        display: flex;
-        flex-direction: column; /* تحويل العناصر لتكون تحت بعض بدلاً من التوزيع الدائري */
-        align-items: center;
-        gap: 20px;
-        transform: scale(0.9); /* تصغير بسيط لتناسب العرض */
+        width: 800px; /* نثبت العرض ليتمكن المستخدم من السحب ورؤية الأطراف */
+        height: 600px;
+        margin: 0 auto;
+        position: relative;
+        transform: scale(0.85); /* تصغير الخريطة لتناسب الارتفاع */
+        transform-origin: center;
     }
 
-    /* إلغاء التموضع المطلق (Position Absolute) في الجوال ليصبح التصميم انسيابياً */
-    .pos {
-        position: static !important;
-        margin: 10px 0;
-        width: 100% !important;
-        display: flex;
-        justify-content: center;
-    }
-
-    .box {
-        max-width: 280px; /* تحديد عرض الصور لكي لا تخرج عن الشاشة */
-        height: auto;
-    }
-
-    .center {
-        position: static !important;
-        order: -1; /* وضع صورة الطالب في البداية */
-        margin-bottom: 30px;
-    }
-
-    .student {
-        width: 150px;
-    }
-
-    /* 2. قسم العناوين والتحذيرات */
+    /* 2. ضبط نصوص التنبيهات (المربعات الملونة) */
     .dark-sec .title {
-        font-size: 1.4rem;
-        padding: 0 15px;
+        font-size: 1.3rem;
+        padding: 0 20px;
     }
 
     .boxes {
         flex-direction: column;
-        align-items: center;
-        gap: 15px;
+        gap: 12px;
+        padding: 0 20px;
     }
 
-    /* 3. شبكة المواد الدراسية */
-    .subjects-section {
-        padding: 20px 10px;
+    .boxxx, .boxx {
+        width: 100%;
+        font-size: 0.9rem;
+        justify-content: center;
     }
 
-    .phase-title {
-        font-size: 1.5rem;
-        text-align: center;
-        grid-column: 1 / -1; /* تأكيد أخذ العرض كامل */
+    /* 3. كروت المواد - لجعلها مريحة للعين */
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding: 15px;
     }
 
     .subject-card {
-        margin-bottom: 15px;
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        border-right: 4px solid #7a00ff; /* تمييز جانبي أنيق */
+    }
+
+    .card-header {
+        margin-bottom: 12px;
     }
 
     .card-header h3 {
-        font-size: 1.1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    /* تحسينات إضافية للشاشات الصغيرة جداً */
-    .header-title {
         font-size: 1.2rem;
+        color: #7a00ff;
     }
 
     .subject-card p {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
+        line-height: 1.7; /* إعطاء مساحة للتنفس بين الأسطر */
+        color: #444;
+        text-align: justify;
     }
 
     .importance-box {
-        font-size: 0.85rem;
-        padding: 10px;
+        background: #f8f0ff;
+        border-right: 3px solid #7a00ff;
+        padding: 12px;
+        margin-top: 15px;
+        font-size: 0.88rem;
     }
-    
-    /* جعل صور المربعات في الخريطة أصغر */
-    .box {
-        max-width: 90%;
+
+    .phase-title {
+        font-size: 1.4rem;
+        margin-top: 30px;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 10px;
     }
+}
+
+/* تحسين السحب على الجوال */
+.awl8sm::-webkit-scrollbar {
+    height: 5px;
+}
+.awl8sm::-webkit-scrollbar-thumb {
+    background: #7a00ff;
+    border-radius: 10px;
 }
