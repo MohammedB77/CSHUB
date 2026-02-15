@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>أدوات الطالب</title>
-    <link href="https://fonts.googleapis.com/css2?family=Tajwal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="d.CSS"> 
+    <link rel="stylesheet" href="d.CSS">
+    <link rel="icon" sizes="32x32" href="favicon.png">
+    <link rel="icon" sizes="192x192" href="favicon.png">
+
 
     <style>
+
+
         body {
-            font-family: 'Tajwal', sans-serif;
             background-color: #f4f4f4;
             margin: 0;
             padding-top: 70px;
@@ -19,139 +23,193 @@
 </head>
 <body>
 
-    <header class="top-bar">
-        <a href="index.html" class="logo">
-        </a>
-        <nav>
-            <ul>
-                <li><a href="index.html">الرئيسية</a></li>
-                <li><a href="studyplan.html">الخطة الدراسية</a></li>
-                <li><a href="StudentResources.html" class="active-link">أدوات الطالب</a></li>
-                <li><a href="certificates.html">الشهادات المهنية</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="student-tools-page-container">
+<header class="top-bar">
+    <nav aria-label="التنقل الرئيسي">
+        <ul>
+            <li><a href="index.html" id ="home">الرئيسية</a></li>
+            <li><a href="studyplan.html" id="studyplan">الخطة الدراسية</a></li>
+             <li><a href="courses.html" id = "roadmap" >دليل علوم الحاسب</a></li>
+            <li><a href="StudentResources.html" class="active-link" aria-current="page">أدوات الطالب</a></li>
+            <li><a href="certificates.html" id = "certificates">الشهادات المهنية</a></li>
+        </ul>
+    </nav>
+</header>
 
-        <div class="university-email-header">
-            <h2>البريد الجامعي</h2>
-            <p>يوفر البريد الجامعي للجامعة دخول غير محدود عبر <span class="highlight-text">GitHub Student Developer Pack</span> مجموعة أدوات وخدمات مفيدة للطلاب، بالإضافة إلى تطبيقات <span class="highlight-text">Microsoft Office</span> و <span class="highlight-text">Gemini AI</span>. واللي بنستكشفها أكثر .</p>
-        </div>
+<main class="student-tools-page-container" aria-labelledby="tools-main-title">
 
-        <section class="tools-image-section">
-            <img src="LandingBage\Group 255.png" alt="تصميم الأدوات الرئيسية" class="main-tools-image">
-        </section>
-
-        <section class="extra-subscriptions-section">
-            <h2 class="section-title">البعض من الاشتراكات المميزة</h2>
-            <div class="subscriptions-list-container">
-                <a href="https://datacamp.com" target="_blank" class="subscription-card">
-                    <img src="LandingBage\Datacam.png" alt="DataCamp" class="sub-logo">
-                    <div class="text-content">
-                        <h2>DataCamp</h2>
-                        <p>منصة تعليمية تساعدك على تعلم تحليل البيانات والبرمجة على يد خبراء عالميين.</p>
-                    </div>
-                </a>
-                <a href="https://frontendmasters.com" target="_blank" class="subscription-card">
-                    <img src="LandingBage\frontendmaser.png" alt="FrontendMasters" class="sub-logo">
-                    <div class="text-content">
-                        <h2>FrontendMasters</h2>
-                        <p>منصة متخصصة في تطوير الويب تقدم دورات متعمقة في JavaScript و Node.js وهندسة الواجهات الأمامية.</p>
-                    </div>
-                </a>
-                <a href="https://codedex.io" target="_blank" class="subscription-card">
-                    <img src="LandingBage\codex.png" alt="Codédex" class="sub-logo">
-                    
-                    <div class="text-content">
-                        <h2>     Codédex</h2>
-                        <p>منصة لتعلم البرمجة بطريقة ممتعة وتفاعلية فيها دورات في Python, HTML, CSS, JavaScript, React, Git وغيرها.</p>
-                    </div>
-                </a>
-                <a href="https://scrimba.com" target="_blank" class="subscription-card">
-                    <img src="LandingBage\scrimba.png" alt="Scrimba" class="sub-logo">
-                    <div class="text-content">
-                        <h2>       Scrimba</h2>
-                        <p>منصة تفاعلية لتعلم تطوير الواجهات الأمامية. تقدم دورات ومشاريع وتحديات برمجية.</p>
-                    </div>
-                </a>
-                <a href="https://visme.co" target="_blank" class="subscription-card">
-                    <img src="LandingBage\visme.png" alt="Visme" class="sub-logo">
-                    <div class="text-content">
-                        <h2>       Visme</h2>
-                        <p>منصة شاملة تساعدك على إنشاء عروض تقديمية جذابة وتفاعلية، مستندات بصرية، تصوّرات بيانات، وفيديوهات قصيرة، ومحتوى بصري مميز.</p>
-                    </div>
-                </a>
-                <a href="https://gitkraken.com" target="_blank" class="subscription-card">
-                    <img src="LandingBage\gitkagreb.png" alt="GitKraken" class="sub-logo">
-                    <div class="text-content">
-                        <h2>GitKraken</h2>
-                        <p>برنامج يسهّل إدارة مشاريع Git بواجهة رسومية واضحة. ويتكامل مع GitHub عشان تدير التعديلات والمشاكل في نفس المكان.</p>
-                    </div>
-                </a>
-            </div>
-            <section class="registration-link-section">
-            <h2 class="section-title">للتعرف على آلية التسجيل والحصول على هذه الخدمات</h2>
-            
-            <div class="registration-link-box">
-                <a href="https://docs.github.com/en/education/about-github-education/github-education-for-students/apply-to-github-education-as-a-student#what-documents-can-i-use-to-prove-im-a-student" target="_blank" class="link-item">
-                    <i class="fas fa-link"></i>
-                    <span>رابط GitHub Education</span>
-                </a>
-            </div>
-        </section>
-        </div>
-        </section>
+    <!-- عنوان الصفحة -->
+    <div class="university-email-header">
+        <h1 id="tools-main-title">البريد الجامعي</h1>
+        <p>
+            يوفر البريد الجامعي للجامعة دخول غير محدود عبر
+            <span class="highlight-text">GitHub Student Developer Pack</span>
+            مجموعة أدوات وخدمات مفيدة للطلاب، بالإضافة إلى تطبيقات
+            <span class="highlight-text">Microsoft Office</span>
+            و
+            <span class="highlight-text">Gemini AI</span>.
+        </p>
     </div>
-<footer class="site-footer">
-        <div class="footer-blur-light"></div>
-    
-        <div class="footer-container">
-            <div class="footer-box contact-box">
-                <h2>تواصل معنا</h2>
-                <div class="contact-links">
-                    <div class="contact-item email-input">
-                        <input type="email" placeholder="mohammedbamhraz@gmail.com" aria-label="البريد الإلكتروني">
-                    </div>
-    
-                    <a href="https://www.instagram.com/jizz2_/" target="_blank" class="contact-item social-link instagram">
-                        <i class="fab fa-instagram-square"></i>
-                        <span>@jizz2_</span>
-                    </a>
-                    
-                
-    
+
+    <!-- صورة الأدوات -->
+    <section class="tools-image-section" aria-label="صورة توضيحية للأدوات المتاحة للطلاب">
+        <img src="LandingBage\Group 255.png" alt="تصميم يوضح أهم الأدوات الرقمية المتاحة للطلاب" class="main-tools-image">
+    </section>
+
+    <!-- الاشتراكات -->
+    <section class="extra-subscriptions-section" aria-labelledby="subscriptions-title">
+
+        <h2 id="subscriptions-title" class="section-title">البعض من الاشتراكات المميزة</h2>
+
+        <div class="subscriptions-list-container" role="list">
+
+            <a href="https://datacamp.com" target="_blank" class="subscription-card"
+               role="listitem"
+               aria-label="منصة داتا كامب لتعلم تحليل البيانات والبرمجة. يفتح في نافذة جديدة">
+                <img src="LandingBage\Datacam.png" alt="" class="sub-logo" aria-hidden="true">
+                <div class="text-content">
+                    <h3>DataCamp</h3>
+                    <p>منصة تعليمية تساعدك على تعلم تحليل البيانات والبرمجة على يد خبراء عالميين.</p>
                 </div>
-            </div>
-    
-            <div class="footer-box bot-box">
-                <h2>بوت الدفعة 🤖</h2>
-                <a href="https://t.me/cCS9s_bot" target="_blank" class="telegram-icon">
-                    <i class="fab fa-telegram-plane"></i>
+            </a>
+
+            <a href="https://frontendmasters.com" target="_blank" class="subscription-card"
+               role="listitem"
+               aria-label="منصة Frontend Masters لتعلم تطوير الويب المتقدم. يفتح في نافذة جديدة">
+                <img src="LandingBage\frontendmaser.png" alt="" class="sub-logo" aria-hidden="true">
+                <div class="text-content">
+                    <h3>FrontendMasters</h3>
+                    <p>منصة متخصصة في تطوير الويب تقدم دورات متعمقة في JavaScript و Node.js وهندسة الواجهات الأمامية.</p>
+                </div>
+            </a>
+
+            <a href="https://codedex.io" target="_blank" class="subscription-card"
+               role="listitem"
+               aria-label="منصة Codédex لتعلم البرمجة بطريقة تفاعلية. يفتح في نافذة جديدة">
+                <img src="LandingBage\codex.png" alt="" class="sub-logo" aria-hidden="true">
+                <div class="text-content">
+                    <h3>Codédex</h3>
+                    <p>منصة لتعلم البرمجة بطريقة ممتعة وتفاعلية فيها دورات في Python وHTML وCSS وJavaScript وReact وGit وغيرها.</p>
+                </div>
+            </a>
+
+            <a href="https://scrimba.com" target="_blank" class="subscription-card"
+               role="listitem"
+               aria-label="منصة Scrimba لتعلم تطوير الواجهات الأمامية. يفتح في نافذة جديدة">
+                <img src="LandingBage\scrimba.png" alt="" class="sub-logo" aria-hidden="true">
+                <div class="text-content">
+                    <h3>Scrimba</h3>
+                    <p>منصة تفاعلية لتعلم تطوير الواجهات الأمامية. تقدم دورات ومشاريع وتحديات برمجية.</p>
+                </div>
+            </a>
+
+            <a href="https://visme.co" target="_blank" class="subscription-card"
+               role="listitem"
+               aria-label="منصة Visme لإنشاء العروض التقديمية والتصاميم البصرية. يفتح في نافذة جديدة">
+                <img src="LandingBage\visme.png" alt="" class="sub-logo" aria-hidden="true">
+                <div class="text-content">
+                    <h3>Visme</h3>
+                    <p>منصة شاملة لإنشاء عروض تقديمية ومستندات بصرية وتصوّرات بيانات وفيديوهات قصيرة.</p>
+                </div>
+            </a>
+
+            <a href="https://gitkraken.com" target="_blank" class="subscription-card"
+               role="listitem"
+               aria-label="برنامج GitKraken لإدارة مشاريع Git بواجهة رسومية. يفتح في نافذة جديدة">
+                <img src="LandingBage\gitkagreb.png" alt="" class="sub-logo" aria-hidden="true">
+                <div class="text-content">
+                    <h3>GitKraken</h3>
+                    <p>برنامج يسهّل إدارة مشاريع Git بواجهة رسومية واضحة ويتكامل مع GitHub.</p>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- رابط التسجيل -->
+    <section class="registration-link-section" aria-labelledby="registration-title">
+
+        <h2 id="registration-title" class="section-title">
+            للتعرف على آلية التسجيل والحصول على هذه الخدمات
+        </h2>
+
+        <div class="registration-link-box">
+            <a href="https://docs.github.com/en/education/about-github-education/github-education-for-students/apply-to-github-education-as-a-student#what-documents-can-i-use-to-prove-im-a-student"
+               target="_blank"
+               class="link-item"
+               aria-label="الانتقال إلى صفحة التسجيل في GitHub Education. يفتح في نافذة جديدة">
+                <i class="fas fa-link" aria-hidden="true"></i>
+                <span>رابط GitHub Education</span>
+            </a>
+        </div>
+
+    </section>
+
+</main>
+
+<!-- الفوتر -->
+<footer class="site-footer" aria-label="تذييل الصفحة ومعلومات التواصل">
+
+    <div class="footer-blur-light" aria-hidden="true"></div>
+
+    <div class="footer-container">
+
+        <div class="footer-box contact-box" aria-labelledby="contact-title">
+            <h2 id="contact-title">تواصل معنا</h2>
+
+            <div class="contact-links">
+                <div class="contact-item email-input">
+                    <input type="email" placeholder="mohammedbamhraz@gmail.com"
+                           aria-label="البريد الإلكتروني للتواصل">
+                </div>
+
+                <a href="https://www.instagram.com/coders__9/" target="_blank"
+                   class="contact-item social-link instagram"
+                   aria-label="زيارة حساب إنستقرام كودرز 9. يفتح في نافذة جديدة">
+                    <i class="fab fa-instagram-square" aria-hidden="true"></i>
+                    <span>@coders__9</span>
                 </a>
-                <p class="bot-description">
-                    بوت الدفعة للملخصات، الملازم، والنماذج. كل ما تحتاجه موجود هنا لتسهيل دراستك.
-                </p>
-                <p class="bot-username">
-                    <span class="highlight">@cCS9s_bot</span>
-                </p>
             </div>
         </div>
-        
-           
-      <div class="copyright">
-    <div class="copyright-content">
-        <span class="copyright-symbol">©</span>
-        <span class="year">2025 CSHUB</span>
-        <span>تم الإنشاء بواسطة</span>
-        <span class="highlight-entity">بواسطتي</span>
 
+        <div class="footer-box bot-box" aria-labelledby="bot-title">
+            <h2 id="bot-title">بوت الدفعة 🤖</h2>
 
-        <span>جميع الحقوق محفوظة.</span>
+            <a href="https://t.me/cCS9s_bot" target="_blank"
+               class="telegram-icon"
+               aria-label="الانتقال إلى بوت الدفعة على تيليجرام. يفتح في نافذة جديدة">
+                <i class="fab fa-telegram-plane" aria-hidden="true"></i>
+            </a>
+
+            <p class="bot-description">
+                بوت الدفعة للملخصات، الملازم، والنماذج. كل ما تحتاجه موجود هنا لتسهيل دراستك.
+            </p>
+
+            <p class="bot-username" aria-label="اسم مستخدم البوت: @cCS9s_bot">
+                <span class="highlight">@cCS9s_bot</span>
+            </p>
+        </div>
+
     </div>
-</div>
 
+    <div class="copyright" aria-label="معلومات حقوق النشر">
+        <div class="copyright-content">
+            <span class="copyright-symbol" aria-hidden="true">©</span>
+            <span class="year">2025 CSHUB</span>
+            <span>تم الإنشاء بواسطة</span>
+            <span class="highlight-entity">اللجنة العلمية</span>
+            <span>جميع الحقوق محفوظة.</span>
+        </div>
+    </div>
+
+</footer>
+
+<!-- زر الوصول -->
+<button class="a11y-toggle"
+        aria-pressed="false"
+        aria-label="تفعيل أو إيقاف وضع الاحتياجات الخاصة">
+  ♿ وضع الوصول
+</button>
+
+<script src="voice.js"></script>
 </body>
-
 </html>
-
-
