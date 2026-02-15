@@ -996,7 +996,7 @@ a {
 
 @media (max-width: 1000px) {
 .top-bar {
-        position: fixed;
+        position: relative;
         top: 0;
         left: 0;
         right: 0;
@@ -1419,3 +1419,4 @@ body {
         padding: 14px;
     }
 }
+
