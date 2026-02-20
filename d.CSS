@@ -1,5 +1,4 @@
-/* General Styles */
-/* الخط الأساسي للموقع */
+
 body {
   font-family: 'IBM Plex Sans Arabic', sans-serif;
   font-weight: 400;
@@ -7,7 +6,6 @@ body {
   color: #1f1f1f;
 }
 
-/* العناوين الرئيسية */
 h1 {
   font-size: 2.3rem;
   font-weight: 700;
@@ -26,7 +24,7 @@ h3 {
   line-height: 1.6;
 }
 
-/* النصوص العادية */
+
 p,
 span,
 li {
@@ -34,7 +32,6 @@ li {
   font-weight: 400;
 }
 
-/* الروابط والأزرار */
 a,
 button {
   font-family: 'IBM Plex Sans Arabic', sans-serif;
@@ -1554,3 +1551,4 @@ body {
         margin: 30px 0 10px !important;
     }
 }
+
