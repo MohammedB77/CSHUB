@@ -1379,27 +1379,24 @@ body {
     margin-top: 20px;
     font-size: 0.9rem;
 }
-/* --- Media Queries لصفحة دليل علوم الحاسب --- */
 
 @media (max-width: 992px) {
-    /* 1. ضبط الخريطة الذهنية لتكون منطقة قابلة للسحب */
     .awl8sm {
-        overflow-x: auto; /* تفعيل السحب الأفقي */
+        overflow-x: auto;
         padding: 40px 0;
         background: rgba(255, 255, 255, 0.02);
         cursor: grab;
     }
 
     .diagram {
-        width: 800px; /* نثبت العرض ليتمكن المستخدم من السحب ورؤية الأطراف */
+        width: 800px; 
         height: 600px;
         margin: 0 auto;
         position: relative;
-        transform: scale(0.85); /* تصغير الخريطة لتناسب الارتفاع */
+        transform: scale(0.85);
         transform-origin: center;
     }
 
-    /* 2. ضبط نصوص التنبيهات (المربعات الملونة) */
     .dark-sec .title {
         font-size: 1.3rem;
         padding: 0 20px;
@@ -1417,7 +1414,6 @@ body {
         justify-content: center;
     }
 
-    /* 3. كروت المواد - لجعلها مريحة للعين */
     .grid-container {
         display: flex;
         flex-direction: column;
@@ -1431,7 +1427,7 @@ body {
         padding: 20px;
         border-radius: 15px;
         box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        border-right: 4px solid #7a00ff; /* تمييز جانبي أنيق */
+        border-right: 4px solid #7a00ff;
     }
 
     .card-header {
@@ -1445,7 +1441,7 @@ body {
 
     .subject-card p {
         font-size: 0.95rem;
-        line-height: 1.7; /* إعطاء مساحة للتنفس بين الأسطر */
+        line-height: 1.7; 
         color: #444;
         text-align: justify;
     }
@@ -1458,13 +1454,11 @@ body {
         font-size: 0.88rem;
     }
 @media (max-width: 850px) {
-    /* 1. تصفير الحاوية العلوية وجعلها مرنة */
     .awl8sm {
         padding: 40px 0 !important;
         height: auto !important;
     }
 
-    /* 2. ترتيب الصور تحت بعض (الطالب أولاً) */
     .diagram {
         display: flex !important;
         flex-direction: column !important;
@@ -1482,7 +1476,6 @@ body {
 
     .student { width: 140px !important; }
 
-    /* 3. إلغاء التوزيع العشوائي للصناديق العلوية */
     .pos {
         position: relative !important;
         inset: auto !important;
@@ -1497,7 +1490,6 @@ body {
         height: auto !important;
     }
 
-    /* 4. إصلاح القسم الداكن (العناوين المكبوسة) */
     .dark-sec {
         padding: 40px 20px !important;
         text-align: center !important;
@@ -1508,7 +1500,6 @@ body {
         gap: 15px !important;
     }
 
-    /* 5. هندسة كروت المواد (التعديل الذي طلبته) */
     .subjects-section { padding: 20px 15px !important; }
 
     .grid-container {
@@ -1522,7 +1513,7 @@ body {
         padding: 20px !important;
         border-radius: 15px !important;
         box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
-        border-right: 5px solid #7a00ff !important; /* لمسة جمالية */
+        border-right: 5px solid #7a00ff !important; 
         background: #fff !important;
     }
 
@@ -1533,7 +1524,7 @@ body {
 
     .subject-card p {
         font-size: 0.95rem !important;
-        line-height: 1.7 !important; /* مساحة مريحة للقراءة */
+        line-height: 1.7 !important; 
         text-align: right !important;
     }
 
@@ -1551,4 +1542,5 @@ body {
         margin: 30px 0 10px !important;
     }
 }
+
 
