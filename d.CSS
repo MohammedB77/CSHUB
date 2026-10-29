@@ -2952,3 +2952,32 @@ a {
     }
 }
 
+
+/* =====================================
+   CSHUB Globe — Mobile Responsive
+   لا يغيّر تنسيق الكمبيوتر
+===================================== */
+
+@media screen and (max-width: 600px) {
+
+    .globe-wrapper {
+        width: 100%;
+        max-width: 100%;
+        touch-action: pan-y;
+        overflow: visible;
+    }
+
+    .globe-arc {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .globe-dots-canvas {
+        max-width: 100%;
+        pointer-events: none;
+    }
+
+    .globe-wrapper.is-dragging {
+        cursor: grabbing;
+    }
+}
