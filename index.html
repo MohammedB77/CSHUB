@@ -1,182 +1,500 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head>   
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الرئيسية</title>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="d.CSS"> 
+
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="d.CSS">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="icon" sizes="32x32" href="LandingBage\codersslogo.png">
-    <link rel="icon" sizes="192x192" href="LandingBage\codersslogo.png">
+    <link rel="icon" sizes="32x32" href="LandingBage/codersslogo.png">
+    <link rel="icon" sizes="192x192" href="LandingBage/codersslogo.png">
+
     
 </head>
+
 <body>
 
     <!-- Google tag -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9VDT7N6GRK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9VDT7N6GRK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-9VDT7N6GRK');
-</script>
-   
-<!-- التنقل -->
-<header class="top-bar">
-    <nav aria-label="التنقل الرئيسي">
-        <ul>
-            <li><a href="index.HTML" class="active-link" aria-current="page" id ="home" class="active-link">الرئيسية</a></li>
-            <li><a href="studyplan.html" id="studyplan">الخطة الدراسية</a></li>
-            <li><a href="courses.html" id = "roadmap" >دليل علوم الحاسب</a></li>
-            <li><a href="StudentResources.html" id="student-resources">أدوات الطالب</a></li>
-            <li><a href="certificates.html" id="certificates">الشهادات المهنية</a></li>
-        </ul>
-    </nav>
-</header>
-<main class="main-content">
-    <div class="illustration">
-        <img src="LandingBage\Student.png" alt="Coding Student">
-    </div>
-    <div class="text-box" id="intro-text">
-  <p>
-    ابداً <span class="highlight">مشوارك</span> الجامعي <br>
-    في علوم الحاسب <br>
-    بسهولة
-  </p>
-</div>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
 
-</main>
-<div class="more-section" aria-labelledby="about-cs">
-    <h2 id="about-title">عن التخصص</h2>
+        gtag('js', new Date());
+        gtag('config', 'G-9VDT7N6GRK');
+    </script>
 
-    <div class="about-cards">
+    <!-- شريط التنقل -->
+    <header class="top-bar">
+        <nav aria-label="التنقل الرئيسي">
+            <ul>
+                <li>
+                    <a href="index.HTML"
+                       class="active-link"
+                       aria-current="page"
+                       id="home">الرئيسية</a>
+                </li>
 
-        <div class="card card-1" id="what-is-cs" role="button" tabindex="0"
-             aria-label="ما هو تخصص علوم الحاسب">
-            <i class="fa-solid fa-desktop card-icon" aria-hidden="true"></i>
-            <h3>ما هو تخصص علوم الحاسب ؟</h3>
-            <p>علوم الحاسب هو العلم الذي يدرس العمليات المرتبطة بالبيانات وكيفية تمثيلها على شكل برامج، ويعتمد على النظريات والتجارب والهندسة لتوظيف الخوارزميات في معالجة وتخزين ونقل المعلومات الرقمية.</p>
+                <li>
+                    <a href="studyplan.html" id="studyplan">الخطة الدراسية</a>
+                </li>
+
+                <li>
+                    <a href="StudentResources.html" id="student-resources">أدوات الطالب</a>
+                </li>
+
+                <li>
+                    <a href="certificates.html" id="certificates">الشهادات المهنية</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- القسم الرئيسي والكرة الأرضية -->
+    <main class="main-content hero-globe-section">
+
+        <div class="text-box hero-intro-text" id="intro-text">
+            <p>
+                ابدأ <span class="highlight">مشوارك</span> الجامعي <br>
+                في علوم الحاسب <br>
+                بسهولة
+            </p>
         </div>
 
-        
-        <div class="card card-2" id="cs-future" role="button" tabindex="0"
-             aria-label="مستقبل تخصص علوم الحاسب">
-            <i class="fa-solid fa-chart-line card-icon" aria-hidden="true"></i>
-            <h3>مستقبل التخصص</h3>
-            <p>نمو المجال يواكب احتياجات السوق والتقنيات الحديثة عالميًا</p>
-        </div>
+        <div class="globe-wrapper" id="globeWrapper">
 
-        <div class="card card-3" id="cs-impact" role="button" tabindex="0"
-             aria-label="أثر تخصص علوم الحاسب">
-            <i class="fa-solid fa-hand-holding-hand card-icon" aria-hidden="true"></i>
-            <h3>أثر التخصص</h3>
-            <p>علوم الحاسب يساهم في تحسين التعليم، الصحة، الأعمال، والخدمات المستقبلية.</p>
-        </div>
+            <div class="globe-arc" id="globeArc">
 
-    </div>
-</div>
-
-<!-- الصفات -->
-<div class="traits-section more-section" aria-labelledby="traits-title">
-    <h2 id="traits-title">صفات أخصائي علوم الحاسوب</h2>
-
-    <div class="traits-grid" role="list">
-
-        <div class="trait" role="listitem"> <i class="fa-solid fa-code" aria-hidden="true"></i> <span>البرمجة وتطوير البرمجيات</span></div>
-        <div class="trait" role="listitem"> <i class="fa-solid fa-people-carry-box" aria-hidden="true"></i> <span>يتحمل المسؤولية الإجتماعية</span></div>
-        <div class="trait" role="listitem"> <i class="fa-solid fa-brain" aria-hidden="true"></i> <span>حل المشكلات والتفكير الخوارزمي</span></div>
-        <div class="trait" role="listitem"> <i class="fa-solid fa-globe" aria-hidden="true"></i> <span>تحليل الأنظمة والبيانات</span></div>
-        <div class="trait" role="listitem"> <i class="fa-solid fa-lightbulb" aria-hidden="true"></i> <span>التفكير المنطقي</span></div>
-        <div class="trait" role="listitem"> <i class="fa-solid fa-lock" aria-hidden="true"></i> <span>مهارات في أمن البيانات والشبكات</span></div>
-
-    </div>
-</div>
-
-<!-- المهارات -->
-<div class="skills-section more-section" aria-labelledby="skills-title">
-    <h2 id="skills-title">مهارات أخصائي علوم الحاسوب</h2>
-
-    <div class="skills-grid" role="list">
-
-        <div class="skill" role="listitem"><i class="fa-solid fa-calendar-days" aria-hidden="true"></i><span>التخطيط والتنظيم</span></div>
-        <div class="skill" role="listitem"><i class="fa-solid fa-clock" aria-hidden="true"></i><span>إدارة الوقت</span></div>
-        <div class="skill" role="listitem"><i class="fa-solid fa-comments" aria-hidden="true"></i><span>التواصل الفعّال</span></div>
-        <div class="skill" role="listitem"><i class="fa-solid fa-hand-fist" aria-hidden="true"></i><span>الصبر والمثابرة</span></div>
-        <div class="skill" role="listitem"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i><span>التعلم المستمر</span></div>
-        <div class="skill" role="listitem"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i><span>الاهتمام بالتفاصيل</span></div>
-
-    </div>
-</div>
-
-<!-- الفوتر -->
-<footer class="site-footer" aria-label="تذييل الصفحة ومعلومات التواصل">
-
-    <div class="footer-blur-light" aria-hidden="true"></div>
-
-    <div class="footer-container">
-
-        <div class="footer-box contact-box" aria-labelledby="contact-title">
-            <h2 id="contact-title">تواصل معنا</h2>
-
-            <div class="contact-links">
-
-                <div class="contact-item email-input">
-                    <input type="email"
-                           placeholder="mohammedbamhraz@gmail.com"
-                           aria-label="البريد الإلكتروني للتواصل: mohammedbamhraz@gmail.com"
-                           readonly>
+                <!-- رموز البرمجة -->
+                <div class="globe-code-symbols" aria-hidden="true">
+                    <span class="globe-code-symbol">01</span>
+                    <span class="globe-code-symbol">{ }</span>
+                    <span class="globe-code-symbol">&lt;/&gt;</span>
+                    <span class="globe-code-symbol">[ ]</span>
+                    <span class="globe-code-symbol">010</span>
+                    <span class="globe-code-symbol">;</span>
+                    <span class="globe-code-symbol">if()</span>
+                    <span class="globe-code-symbol">01</span>
+                    <span class="globe-code-symbol">&lt;code&gt;</span>
+                    <span class="globe-code-symbol">fn()</span>
                 </div>
 
-                <a href="https://www.instagram.com/jizz2_/"
-                   target="_blank"
-                   class="contact-item social-link instagram"
-                   aria-label="هلا">
-                    <i class="fab fa-instagram-square" aria-hidden="true"></i>
-                    <span>@jizz2_</span>
-                </a>
+            </div>
+
+            <div class="globe-items-container">
+
+                <!-- صورة مبنى الكلية -->
+                <div class="cs-element element-center college-building-element">
+                    <img
+                        src="LandingBage/ModernAcademicBuildingSticker.png"
+                        class="college-building-image"
+                        alt="رسم توضيحي لكلية الحوسبة وتقنية المعلومات"
+                        draggable="false">
+                </div>
+
+                <!-- الطالب عند حافة الكرة -->
+                <div class="cs-element student-illustration">
+                    <img
+                        src="LandingBage/StudentwithBooks.png"
+                        alt="طالب جامعي"
+                        class="student-image"
+                        draggable="false">
+                </div>
+
+                <!-- نافذة الكود -->
+                <div class="cs-element element-right-2">
+                    <div class="code-window">
+                        &lt;Welcome/&gt; In0ur &amp; W0rld
+                    </div>
+                </div>
+
+                <!-- صورة البرمجة -->
+                <div class="cs-element element-left-1 developer-illustration">
+                    <img
+                        src="LandingBage/StackedBooksandLaptop.png"
+                        alt="رمز البرمجة وعلوم الحاسب"
+                        class="developer-image"
+                        draggable="false">
+                </div>
+
+                <!-- الذكاء الاصطناعي -->
+                <div class="cs-element element-left-2">
+                    <div class="tech-badge">
+                        <i class="fa-solid fa-brain" aria-hidden="true"></i>
+                        <span>الذكاء الاصطناعي</span>
+                    </div>
+                </div>
 
             </div>
         </div>
+    </main>
 
-        <div class="footer-box bot-box" aria-labelledby="bot-title">
-            <h2 id="bot-title">بوت الدفعة 🤖</h2>
+    <!-- عن التخصص -->
+    <div class="more-section" aria-labelledby="about-title">
+        <h2 id="about-title">عن التخصص</h2>
 
-            <a href="https://t.me/cCS9s_bot"
-               target="_blank"
-               class="telegram-icon"
-               aria-label="الانتقال إلى بوت الدفعة على تيليجرام يفتح في نافذة جديدة">
-                <i class="fab fa-telegram-plane" aria-hidden="true"></i>
-            </a>
+        <div class="about-cards">
 
-            <p class="bot-description">
-                بوت الدفعة للملخصات، الملازم، والنماذج. كل ما تحتاجه موجود هنا لتسهيل دراستك.
-            </p>
+            <div class="card card-1"
+                 id="what-is-cs"
+                 role="button"
+                 tabindex="0"
+                 aria-label="ما هو تخصص علوم الحاسب">
 
-            <p class="bot-username" aria-label="اسم مستخدم البوت: @cCS9s_bot">
-                <span class="highlight">@cCS9s_bot</span>
+                <i class="fa-solid fa-desktop card-icon" aria-hidden="true"></i>
+
+                <h3>ما هو تخصص علوم الحاسب ؟</h3>
+
+                <p>
+                    علوم الحاسب هو العلم الذي يدرس العمليات المرتبطة بالبيانات وكيفية تمثيلها على شكل برامج،
+                    ويعتمد على النظريات والتجارب والهندسة لتوظيف الخوارزميات في معالجة وتخزين ونقل المعلومات الرقمية.
+                </p>
+            </div>
+
+            <div class="card card-2"
+                 id="cs-future"
+                 role="button"
+                 tabindex="0"
+                 aria-label="مستقبل تخصص علوم الحاسب">
+
+                <i class="fa-solid fa-chart-line card-icon" aria-hidden="true"></i>
+
+                <h3>مستقبل التخصص</h3>
+
+                <p>
+                    نمو المجال يواكب احتياجات السوق والتقنيات الحديثة عالميًا
+                </p>
+            </div>
+
+            <div class="card card-3"
+                 id="cs-impact"
+                 role="button"
+                 tabindex="0"
+                 aria-label="أثر تخصص علوم الحاسب">
+
+                <i class="fa-solid fa-hand-holding-hand card-icon" aria-hidden="true"></i>
+
+                <h3>أثر التخصص</h3>
+
+                <p>
+                    علوم الحاسب يساهم في تحسين التعليم، الصحة، الأعمال، والخدمات المستقبلية.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- صفات أخصائي علوم الحاسوب -->
+    <div class="traits-section more-section" aria-labelledby="traits-title">
+        <h2 id="traits-title">صفات أخصائي علوم الحاسوب</h2>
+
+        <div class="traits-grid" role="list">
+
+            <div class="trait" role="listitem">
+                <i class="fa-solid fa-code" aria-hidden="true"></i>
+                <span>البرمجة وتطوير البرمجيات</span>
+            </div>
+
+            <div class="trait" role="listitem">
+                <i class="fa-solid fa-people-carry-box" aria-hidden="true"></i>
+                <span>يتحمل المسؤولية الإجتماعية</span>
+            </div>
+
+            <div class="trait" role="listitem">
+                <i class="fa-solid fa-brain" aria-hidden="true"></i>
+                <span>حل المشكلات والتفكير الخوارزمي</span>
+            </div>
+
+            <div class="trait" role="listitem">
+                <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                <span>تحليل الأنظمة والبيانات</span>
+            </div>
+
+            <div class="trait" role="listitem">
+                <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
+                <span>التفكير المنطقي</span>
+            </div>
+
+            <div class="trait" role="listitem">
+                <i class="fa-solid fa-lock" aria-hidden="true"></i>
+                <span>مهارات في أمن البيانات والشبكات</span>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- مهارات أخصائي علوم الحاسوب -->
+    <div class="skills-section more-section" aria-labelledby="skills-title">
+        <h2 id="skills-title">مهارات أخصائي علوم الحاسوب</h2>
+
+        <div class="skills-grid" role="list">
+
+            <div class="skill" role="listitem">
+                <i class="fa-solid fa-calendar-days" aria-hidden="true"></i>
+                <span>التخطيط والتنظيم</span>
+            </div>
+
+            <div class="skill" role="listitem">
+                <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                <span>إدارة الوقت</span>
+            </div>
+
+            <div class="skill" role="listitem">
+                <i class="fa-solid fa-comments" aria-hidden="true"></i>
+                <span>التواصل الفعّال</span>
+            </div>
+
+            <div class="skill" role="listitem">
+                <i class="fa-solid fa-hand-fist" aria-hidden="true"></i>
+                <span>الصبر والمثابرة</span>
+            </div>
+
+            <div class="skill" role="listitem">
+                <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                <span>التعلم المستمر</span>
+            </div>
+
+            <div class="skill" role="listitem">
+                <i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i>
+                <span>الاهتمام بالتفاصيل</span>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- =========================================
+         المعرفة تصنع فرقًا
+         مجالات علوم الحاسب في حياتنا
+ 
+=========================================
+     المعرفة تصنع فرقًا
+     مجالات علوم الحاسب في حياتنا
+========================================== -->
+
+<section class="cs-fields-section" aria-labelledby="cs-fields-title">
+    <div class="cs-fields-inner">
+
+        <div class="cs-section-heading">
+            <span class="cs-section-kicker" id="cs-fields-kicker">
+                <i class="fa-solid fa-earth-asia" aria-hidden="true"></i>
+                المعرفة تصنع فرقًا
+            </span>
+
+            <h2 id="cs-fields-title">مجالات علوم الحاسب في حياتنا</h2>
+
+            <p id="cs-fields-description">
+                تدخل علوم الحاسب في قطاعات كثيرة، ولا يقتصر دورها على كتابة
+                البرامج؛ فهي تساعد على تنظيم المعلومات، وحماية البيانات،
+                وتحسين القرارات، وتطوير الخدمات التي يعتمد عليها الناس يوميًا.
             </p>
         </div>
 
-    </div>
+        <div class="cs-fields-grid">
 
-    <div class="copyright" aria-label="معلومات حقوق النشر">
-        <div class="copyright-content">
-            <span class="copyright-symbol" aria-hidden="true">©</span>
-            <span class="year">2026 CSHUB</span>
-            <span>تم الإنشاء بواسطة</span>
-            <span class="highlight-entity"> الطالب محمد عبدالله بامحرز </span>
-            <span>جميع الحقوق محفوظة.</span>
+            <!-- التعليم والخدمات العامة -->
+            <article class="cs-field-card" id="cs-education">
+                <span class="cs-field-icon">
+                    <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                </span>
+
+                <div>
+                    <h3>التعليم والخدمات العامة</h3>
+                    <p>
+                        تسهم الأنظمة الرقمية في تسهيل الوصول إلى المعلومات،
+                        وتنظيم الخدمات، وتطوير تجربة الطلاب والمستفيدين.
+                    </p>
+                </div>
+            </article>
+
+            <!-- الصحة والرعاية -->
+            <article class="cs-field-card" id="cs-health">
+                <span class="cs-field-icon">
+                    <i class="fa-solid fa-heart-pulse" aria-hidden="true"></i>
+                </span>
+
+                <div>
+                    <h3>الصحة والرعاية</h3>
+                    <p>
+                        تساعد قواعد البيانات وتحليل المعلومات على تنظيم
+                        السجلات الطبية ودعم المختصين في متابعة الحالات.
+                    </p>
+                </div>
+            </article>
+
+            <!-- البيانات واتخاذ القرار -->
+            <article class="cs-field-card" id="cs-data">
+                <span class="cs-field-icon">
+                    <i class="fa-solid fa-chart-pie" aria-hidden="true"></i>
+                </span>
+
+                <div>
+                    <h3>البيانات واتخاذ القرار</h3>
+                    <p>
+                        يحوّل تحليل البيانات المعلومات المتفرقة إلى مؤشرات
+                        تساعد المؤسسات على فهم المشكلات واختيار البدائل.
+                    </p>
+                </div>
+            </article>
+
+            <!-- الأمن السيبراني -->
+            <article class="cs-field-card" id="cs-security">
+                <span class="cs-field-icon">
+                    <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                </span>
+
+                <div>
+                    <h3>الأمن السيبراني</h3>
+                    <p>
+                        يركز على حماية الأنظمة والشبكات والمعلومات من
+                        الوصول غير المصرح به، وتقليل المخاطر الرقمية.
+                    </p>
+                </div>
+            </article>
+
+            <!-- الذكاء الاصطناعي -->
+            <article class="cs-field-card" id="cs-ai">
+                <span class="cs-field-icon">
+                    <i class="fa-solid fa-brain" aria-hidden="true"></i>
+                </span>
+
+                <div>
+                    <h3>الذكاء الاصطناعي</h3>
+                    <p>
+                        يتيح تحليل الأنماط والتنبؤ والمساعدة في بعض المهام،
+                        مع ضرورة تقييم النتائج ومراعاة الاستخدام المسؤول.
+                    </p>
+                </div>
+            </article>
+
+            <!-- البنية التحتية والمدن -->
+            <article class="cs-field-card" id="cs-cities">
+                <span class="cs-field-icon">
+                    <i class="fa-solid fa-city" aria-hidden="true"></i>
+                </span>
+
+                <div>
+                    <h3>البنية التحتية والمدن</h3>
+                    <p>
+                        تساعد الأنظمة الحاسوبية على إدارة الموارد،
+                        وتحسين التخطيط، ودعم كفاءة الخدمات والبنية التحتية.
+                    </p>
+                </div>
+            </article>
+
         </div>
+
+        <!-- روابط الاستكشاف -->
+        <div class="cs-fields-footer">
+
+            <div class="cs-fields-footer-text">
+                <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+
+                <p>
+                    لكل مجال مفاهيم وأدوات مختلفة؛ ابدأ بفهم الأساسيات،
+                    ثم استكشف المجال الذي يتوافق مع اهتماماتك وأهدافك.
+                </p>
+            </div>
+
+            <div class="cs-explore-links">
+                <a href="studyplan.html" class="cs-explore-link">
+                    <i class="fa-solid fa-book" aria-hidden="true"></i>
+                    استكشف الخطة الدراسية
+                </a>
+
+                <a href="StudentResources.html"
+                   class="cs-explore-link cs-explore-link-secondary">
+                    <i class="fa-solid fa-toolbox" aria-hidden="true"></i>
+                    أدوات الطالب
+                </a>
+            </div>
+
+        </div>
+
     </div>
+</section>
 
-</footer>
-<button class="a11y-toggle" aria-pressed="false" aria-label="تفعيل وضع الاحتياجات الخاصة">
-  <span class="icon">♿</span>
-  <span class="text">وضع الوصول</span>
-</button>
 
-<script src="voice.js"></script>
+    <!-- تذييل الصفحة -->
+    <footer class="site-footer" aria-label="تذييل الصفحة ومعلومات التواصل">
+        <div class="footer-blur-light" aria-hidden="true"></div>
+
+        <div class="footer-container">
+
+            <div class="footer-box contact-box" aria-labelledby="contact-title">
+                <h2 id="contact-title">تواصل معنا</h2>
+
+                <div class="contact-links">
+
+                    <div class="contact-item email-input">
+                        <input
+                            type="email"
+                            placeholder="mohammedbamhraz@gmail.com"
+                            aria-label="البريد الإلكتروني للتواصل: mohammedbamhraz@gmail.com"
+                            readonly>
+                    </div>
+
+                    <a href="https://www.instagram.com/coders__9/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="contact-item social-link instagram"
+                       aria-label="زيارة حساب إنستقرام كودرز 9">
+
+                        <i class="fab fa-instagram-square" aria-hidden="true"></i>
+                        <span>@coders__9</span>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="footer-box bot-box" aria-labelledby="bot-title">
+                <h2 id="bot-title">بوت الدفعة 🤖</h2>
+
+                <a href="https://t.me/cCS9s_bot"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="telegram-icon"
+                   aria-label="الانتقال إلى بوت الدفعة على تيليجرام">
+
+                    <i class="fab fa-telegram-plane" aria-hidden="true"></i>
+                </a>
+
+                <p class="bot-description">
+                    بوت الدفعة للملخصات، الملازم، والنماذج. كل ما تحتاجه موجود هنا لتسهيل دراستك.
+                </p>
+
+                <p class="bot-username" aria-label="اسم مستخدم البوت: @cCS9s_bot">
+                    <span class="highlight">@cCS9s_bot</span>
+                </p>
+            </div>
+
+        </div>
+
+        <div class="copyright" aria-label="معلومات حقوق النشر">
+            <div class="copyright-content">
+                <span class="copyright-symbol" aria-hidden="true">©</span>
+                <span class="year">2026 CSHUB</span>
+                <span>تم الإنشاء بواسطة</span>
+                <span class="highlight-entity">اللجنة العلمية</span>
+                <span>جميع الحقوق محفوظة.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- زر الوصول -->
+    <button class="a11y-toggle"
+            aria-pressed="false"
+            aria-label="تفعيل أو إيقاف وضع الاحتياجات الخاصة">
+        وضع الوصول
+    </button>
+
+    <script src="voice.js"></script>
+
+   
+
 </body>
 </html>
